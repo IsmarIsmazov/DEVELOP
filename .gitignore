@@ -1,0 +1,111 @@
+venv
+__pycache__
+.idea
+# Virtual Environment
+venv/
+.venv/
+
+# Environment variables
+.env
+
+# Static and Media directories
+static/
+media/
+back_media/
+
+# Database
+db.sqlite3
+
+# Compiled Python files
+__pycache__/
+
+# Celery Beat schedule
+celerybeat-schedule/
+celerybeat-schedule.db/
+
+# Docker-related files
+docker-compose.override.yml
+docker-compose.override.yaml
+
+# Docker image files
+docker-compose.yml
+docker-compose.prod.yaml
+docker-compose.prod.yml
+
+# Docker environment files
+.env.docker
+
+# Dependency directories
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+devops/distributions
+devops/environments/.backend
+devops/environments/.mysql
+
+# Logs
+*.log
+logs/
+*.log.*
+*.log-*
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# PyCharm settings
+.idea/
+
+# Compiled Python files
+*.pyc
+*.pyo
+
+# MySQL database
+mysql/
+
+# Editor-specific files
+.vscode/
+
+# Yarn
+yarn-error.log
+yarn.lock
+
+# User-specific files
+*.sublime-workspace
+*.sublime-project
+*.iml
+
+# Local history
+.history/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pipenv
+Pipfile.lock
+
+
+# poetry
+poetry.lock
+celerybeat-schedule
