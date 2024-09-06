@@ -9,26 +9,21 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-
+from .env_reader import env, csv
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
+SECRET_KEY = env('SECRET_KEY')
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
+DEBUG = env('DEBUG', default=False, cast=bool)
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-8#p$u17kz39g7vwb_+i$$z!wd(ouz!)+6o-d@*zy+t#n$9e$nb'
+ALLOWED_HOSTS = env('ALLOWED_HOSTS', cast=csv())
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
-
-# Application definition
+APPS = [
+    'apps.common',
+    'apps.users'
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -37,6 +32,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    *APPS
 ]
 
 MIDDLEWARE = [
